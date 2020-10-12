@@ -5,8 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  width: 100vw;
 }
 
 code {
@@ -14,3 +12,6 @@ code {
     monospace;
 }
 
+.menu-card {
+  padding:20px
+}

@@ -10,22 +10,22 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function Restaurant(props) {
-	
 	const classes = useStyles();
-
 	return (
-		<Grid container className={classes.root} spacing={2}>
-			<Grid item xs={12} >
-				<Grid container justify='center' align-item="center" spacing={4}>
-					{props.kainTayo.restaurantOne.menu.map(food => {
-						return (
-							<Grid item  xl={4} key={Math.random() * 100}>
-								<MenuCard key={food.foodname} food={food} />
-							</Grid>
-						)
-					})}
-				</Grid>
-			</Grid>
+		<Grid   
+		container
+		direction="row"
+		justify="center"
+		alignItems="center" 
+		className={classes.root}	
+		 >
+			{props.kainTayo.restaurantOne.menu.map(food => {
+				return (
+					<Grid className="menu-card" item xl={4} lg={4} align="center" key={Math.random() * 100}>
+						<MenuCard  key={food.foodname} food={food} />
+					</Grid>
+				);
+			})}
 		</Grid>
 	);
 }

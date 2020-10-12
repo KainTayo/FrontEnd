@@ -11,47 +11,43 @@ import AddIcon from '@material-ui/icons/Add';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
+	root: {
+		maxWidth: 345
+	},
+	media: {
+		height: 140
+	}
 });
 
 function MenuCard(props) {
-  const classes = useStyles();
+	const classes = useStyles();
 
-  return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={props.food.image}
-          title={props.food.foodname}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h4" component="h2">
-          {props.food.foodname}
-          </Typography>
-          <Typography variant="h5" color="textSecondary" component="h4">
-          {props.food.price}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-          {props.food.description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          <AddIcon/>
-        </Button>
-        <Button size="small" color="primary">
-          <ShoppingCartIcon/>
-        </Button>
-      </CardActions>
-    </Card>
-  );
+	return (
+		<Card className={classes.root}>
+			<CardActionArea>
+				<CardMedia className={classes.media} image={props.food.image} title={props.food.foodname} />
+				<CardContent>
+					<Typography gutterBottom variant='h4' component='h2'>
+						{props.food.foodname}
+					</Typography>
+					<Typography variant='h5' color='textSecondary' component='h4'>
+						{props.food.price}
+					</Typography>
+					<Typography variant='body2' color='textSecondary' component='p'>
+						{props.food.description}
+					</Typography>
+				</CardContent>
+			</CardActionArea>
+			<CardActions>
+				<Button size='small' color='primary'>
+					<AddIcon />
+				</Button>
+				<Button size='small' color='primary'>
+					<ShoppingCartIcon />
+				</Button>
+			</CardActions>
+		</Card>
+	);
 }
 
-export default  MenuCard;
+export default MenuCard;
