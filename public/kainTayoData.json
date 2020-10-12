@@ -1,89 +1,121 @@
 {
-    "about": "Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
-    "contact": "123456789",
-    "socials":[],
-    "restaurants":[
-        {
-            "name":"Restaurant",
-            "contact":"987-654-3210",
-            "menu":[
-                {
-                    "name":"siopao",
-                    "price":"100",
-                    "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
-                    "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                    "nutrition":"100cal"
-                },
-                {
-                    "name":"siopao",
-                    "price":"100",
-                    "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
-                    "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                    "nutrition":"100cal"
-                },
-                {
-                    "name":"siopao",
-                    "price":"100",
-                    "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
-                    "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                    "nutrition":"100cal"
-                }                
-            ]
-        },
-        {
-            "name":"Restaurant",
-            "contact":"987-654-3210",
-            "menu":[
-                {
-                    "name":"siopao",
-                    "price":"100",
-                    "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
-                    "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                    "nutrition":"100cal"
-                },
-                {
-                    "name":"siopao",
-                    "price":"100",
-                    "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
-                    "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                    "nutrition":"100cal"
-                },
-                {
-                    "name":"siopao",
-                    "price":"100",
-                    "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
-                    "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                    "nutrition":"100cal"
-                }                
-            ]
-        },
-        {
-            "name":"Restaurant",
-            "contact":"987-654-3210",
-            "menu":[
-                {
-                    "name":"siopao",
-                    "price":"100",
-                    "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
-                    "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                    "nutrition":"100cal"
-                },
-                {
-                    "name":"siopao",
-                    "price":"100",
-                    "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
-                    "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                    "nutrition":"100cal"
-                },
-                {
-                    "name":"siopao",
-                    "price":"100",
-                    "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
-                    "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                    "nutrition":"100cal"
-                }                
-            ]
-        },
-        
-    ]
+    "name":"kainTayo",
+    "about" : "Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+    "contact":{
+        "phone":"12345",
+        "email":"email@email.com",
+        "address":{
+            "street":"123 street",
+            "city": "city",
+            "state": "state",
+            "zip": "1234"
+        }
+    },
+    "restaurantOne": {
+        "about":"Chicken Restaurant",
+        "theme":{},
+        "restaurantName":"restaurantOne",
+        "logo":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "menu":[
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            },
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            },
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            },            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            },
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            },
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            }
+        ]
+    },    
+    "restaurantTwo": {
+        "about":"Chicken Restaurant",
+        "theme":{},
+        "restaurantName":"restaurantTwo",
+        "logo":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "menu":[
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            },
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            },
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            }
+        ]
+    },    
+    "restaurantThree": {
+        "about":"Chicken Restaurant",
+        "theme":{},
+        "restaurantName":"restaurantThree",
+        "logo":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "menu":[
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            },
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            },
+            {
+                "foodname":"siopao",
+                "image":"https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                "description":"Sed quae tandem ista ratio est? Nec vero alia sunt quaerenda contra Carneadeam illam sententiam.",
+                "price":"100",
+                "nutrition":"150cal"
+            }
+        ]
+    }
 }
