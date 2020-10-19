@@ -33,7 +33,7 @@ const emptyObject = {
 	}
 };
 
-function Restaurant(props) {
+function Products(props) {
 	const [kainTayo, setKainTayo] = useState(emptyObject);
 
 	useEffect(() => {
@@ -63,4 +63,4 @@ function Restaurant(props) {
 	);
 }
 
-export default Restaurant;
+export default Products;
