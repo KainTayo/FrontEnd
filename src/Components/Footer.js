@@ -12,24 +12,14 @@ import IconButton from '@material-ui/core/IconButton';
 
 
 const useStyles = makeStyles((theme) => ({
-	text: {
-		padding: theme.spacing(2, 2, 0)
-	},
-	paper: {
-		paddingBottom: 50
-	},
-	list: {
-		marginBottom: theme.spacing(2)
-	},
-	subheader: {
-		backgroundColor: theme.palette.background.paper
-	},
 	appBar: {
 		top: 'auto',
         bottom: 0,
         display:'flex',
         justifyContent:'center',
-        alignItems:'center'
+		alignItems:'center',
+		marginTop:20
+		
 	},
 	grow: {
 		flexGrow: 1

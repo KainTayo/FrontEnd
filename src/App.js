@@ -1,47 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Restaurant from './Components/Restaurant';
 import 'fontsource-roboto';
-
-import axios from 'axios';
-
-const emptyObject = {
-	name: '',
-	about: '',
-	contact: {
-		phone: '',
-		email: '',
-		address: {
-			street: '',
-			city: '',
-			state: '',
-			zip: ''
-		}
-	},
-	restaurantOne: {
-		about: '',
-		theme: {},
-		restaurantName: '',
-		logo: '',
-		menu: []
-	}
-};
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Components/Home';
 
 function App() {
-	const [kainTayo, setKainTayo] = useState(emptyObject);
-
-	useEffect(() => {
-		axios
-			.get('/kainTayoData.json')
-			.then(res => setKainTayo(res.data))
-			.catch(err => console.log(err));
-	}, []);
 	return (
 		<>
-			<Header />
-			<Restaurant kainTayo={kainTayo} />
+			<Router>
+				<Header />
+				<Switch>
+					<Route path='/restaurant'>
+						<Restaurant />
+					</Route>
+					<Route exact path='/' component={Home} />
+				</Switch>
+			</Router>
+
 			<Footer />
 		</>
 	);
