@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import Footer from './Footer';
 import Products from './Products';
 import TsaaNa from '../Components/Restaurants/TsaaNa'
 import CasaDapitan from '../Components/Restaurants/CasaDapitan'
