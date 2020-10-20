@@ -43,8 +43,7 @@ const useStyles = makeStyles(theme => ({
 		}
 	},
 	tabContainer: {
-		marginLeft: 'auto',
-		marginRight: 'auto'
+		marginLeft: 'auto'
 	},
 	tab: {
 		...theme.typography.tab,
@@ -66,9 +65,10 @@ const useStyles = makeStyles(theme => ({
 		}
 	},
 	menu: {
-		backgroundColor: theme.palette.common.blue,
+		backgroundColor: theme.palette.primary.light,
 		color: 'white',
-		borderRadius: '0px'
+		borderRadius: '0px',
+		transition: '0.5s ease-in'
 	},
 	menuItem: {
 		...theme.typography.tab,
@@ -78,7 +78,8 @@ const useStyles = makeStyles(theme => ({
 		opacity: 0.7
 	},
 	appBar: {
-		backgroundColor: 'whitesmoke'
+		backgroundColor: 'whitesmoke',
+		zIndex:theme.zIndex.modal + 1
 	},
 	drawerIconContainer: {
 		marginLeft: 'auto',
@@ -102,7 +103,9 @@ const useStyles = makeStyles(theme => ({
 		backgroundColor: theme.palette.common.orange
 	},
 	drawerItemSelected: {
-		opacity: 1
+		"&.MuiListItemText-root":{
+			opacity: 1
+		}
 	}
 }));
 
@@ -179,8 +182,7 @@ function Header(props) {
 	//renders when on desktop view
 	const desktopView = (
 		<React.Fragment>
-			<Tabs value={value} onChange={handleChange} className={classes.tabContainer} indicatorColor='primary'>
-				<Tab className={classes.tab} component={Link} to='/' label='Home' />
+			<Tabs value={value} onChange={handleChange} className={classes.tabContainer} indicatorColor='primary'>		
 				{routes.map((route,index)=>
 					(<Tab 
 						className={classes.tab} 
@@ -205,10 +207,11 @@ function Header(props) {
 				onClose={handleClose}
 				MenuListProps={{ onMouseLeave: handleClose }}
 				elevation={0}
+				style={{zIndex:1302}}
 				keepMounted>
 				{menuOptions.map((option, index) => (
 					<MenuItem
-						key={option}
+						key={`${option}${index}`}
 						classes={{ root: classes.menuItem }}
 						onClick={e => {
 							handleMenuItemClick(e, index);
@@ -234,10 +237,11 @@ function Header(props) {
 				onClose={() => setOpenDrawer(false)}
 				onOpen={() => setOpenDrawer(true)}
 				classes={{ paper: classes.drawer }}>
+				<div className={classes.toolbarMargin}/>
 				<List disablePadding>
 				{routes.map((route,index)=>(
-					<ListItem key={`${route}${index}`} divider button component={Link} to={route.link} selected={value===route.activeIndex}onClick={()=>{setOpenDrawer(false);setValue(route.activeIndex) }}>
-						<ListItemText className={value === route.activeIndex ? [classes.drawerItem,classes.drawerItemSelected]: classes.drawerItem}disableTypography>{route.name}</ListItemText>
+					<ListItem key={`${route}${index}`} divider button component={Link} to={route.link} classes={{selected:classes.drawerItemSelected}} selected={value===route.activeIndex}onClick={()=>{setOpenDrawer(false);setValue(route.activeIndex) }}>
+						<ListItemText className={classes.drawerItem}disableTypography>{route.name}</ListItemText>
 					</ListItem>
 				))}
 					<ListItem
@@ -250,9 +254,10 @@ function Header(props) {
 						component={Link}
 						className={classes.drawerItemCheckout}
 						to='/checkout'
-						selected={value === 5}>
+						selected={value === 5}
+						classes={{root:classes.drawerItemCheckout,selected:classes.drawerItemSelected}}>
 						<ListItemIcon><ShoppingCartIcon /></ListItemIcon>
-						<ListItemText className={value===5 ? [classes.drawerItem,classes.drawerItemSelected]:classes.drawerItem} disableTypography>
+						<ListItemText className={classes.drawerItem} disableTypography>
 							Checkout
 						</ListItemText>
 					</ListItem>
