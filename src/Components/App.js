@@ -27,7 +27,7 @@ function App() {
 					<Route path='/paddy' component={Paddy} />
 					<Route path='/tsaa' component={TsaaNa} />
 				</Switch>
-				<Footer />
+
 			</Router>
 		</ThemeProvider>
 	);

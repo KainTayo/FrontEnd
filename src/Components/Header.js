@@ -50,7 +50,7 @@ export default function Header() {
 	return (
 		<>
 			<ElevationScroll>
-				<AppBar color="secondary">
+				<AppBar color='secondary'>
 					<Toolbar disableGutters>
 						<Button className={classes.logoContainer} disableRipple component={RouterLink} to='/'>
 							<img alt='company logo' className={classes.logo} src={KainTayo} />
