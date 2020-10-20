@@ -19,11 +19,11 @@ function App() {
 			<Router>
 				<Header />
 				<Switch>
-					<Route exact path='/' component={Home} />				
+					<Route exact path='/' component={Home} />			
 					<Route path='/products' component={Products} />
 					<Route path='/casadapitan' component={CasaDapitan} />
 					<Route path='/ggochicken' component={GgoChicken} />
-					<Route path='/kaninanniremy' component={KainanNiRemy} />
+					<Route path='/remy' component={KainanNiRemy} />
 					<Route path='/paddy' component={Paddy} />
 					<Route path='/tsaa' component={TsaaNa} />
 				</Switch>
