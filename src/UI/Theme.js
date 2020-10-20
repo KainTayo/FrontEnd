@@ -23,7 +23,7 @@ export default createMuiTheme({
             fontWeight:'700',
             fontSize:'1rem',
         },
-        estimate:{
+        checkout:{
             fontFamily: "Pacifico",
             fontSize:"1rem",
             textTransform:"none",
