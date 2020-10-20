@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Products from './Products';
+import Footer from './Footer'
 import TsaaNa from '../Components/Restaurants/TsaaNa'
 import CasaDapitan from '../Components/Restaurants/CasaDapitan'
 import KainanNiRemy from '../Components/Restaurants/KainanNiRemy'
@@ -26,7 +27,7 @@ function App() {
 					<Route path='/paddy' component={Paddy} />
 					<Route path='/tsaa' component={TsaaNa} />
 				</Switch>
-
+				<Footer/>
 			</Router>
 		</ThemeProvider>
 	);
