@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, useScrollTrigger, Tabs, Tab, Button, Menu, MenuItem, useMediaQuery, SwipeableDrawer, IconButton, ListItem, ListItemText, List, ListItemIcon  } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/styles';
-import kainTayo from '../assets/kainTayo.png';
+import kainTayo from '../assets/kainTayo.png'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import MenuIcon from '@material-ui/icons/Menu';
