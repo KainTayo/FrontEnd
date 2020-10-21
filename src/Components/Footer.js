@@ -50,16 +50,16 @@ export default function Footer() {
 			<CssBaseline />
 			<AppBar position='fixed' color='primary' className={classes.appBar}>
 				<Toolbar>
-					<IconButton color='inherit'>
+					<IconButton component={"a"} href="https://www.facebook.com/kaintayo.shop" rel="noopener noreferrer" target="_blank" color='inherit'>
 						<FacebookIcon />
 					</IconButton>
-					<IconButton color='inherit'>
+					<IconButton component={"a"} href="https://www.instagram.com/kaintayo.shop/" rel="noopener noreferrer" target="_blank"  color='inherit'>
 						<InstagramIcon />
 					</IconButton>
-					<IconButton color='inherit'>
+					<IconButton component={"a"} href="https://www.instagram.com/mcm_akol/" rel="noopener noreferrer" target="_blank" color='inherit'>
 						<PinterestIcon />
 					</IconButton>
-					<IconButton color='inherit'>
+					<IconButton component={"a"} href="https://www.instagram.com/mcm_akol/" rel="noopener noreferrer" target="_blank" color='inherit'>
 						<TwitterIcon />
 					</IconButton>
 				</Toolbar>

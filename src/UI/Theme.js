@@ -54,6 +54,15 @@ export default createMuiTheme({
 		body2:{
 			fontFamily: "'Lato', 'sans-serif'"		
 	
+		},
+		subtitle1:{
+			marginBottom: '1em',
+			lineHeight:'1',
+			textAlign:'justify',
+			marginTop: '1rem',
+			fontFamily:'Lato',
+			color:"	#808080	"       
+	
 		}		
 	}
 });

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import Products from './Products';
 import Footer from './Footer'
@@ -12,14 +12,20 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import theme from '../UI/Theme';
 import { ThemeProvider } from '@material-ui/core/styles';
+import Restaurants from './Restaurants/Restaurants'
 
 function App() {
+	const [value, setValue] = useState(0);
+	const [selectedIndex, setSelectedIndex] = useState(0);
 	return (
 		<ThemeProvider theme={theme}>
 			<Router>
-				<Header />
+				<Header value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
 				<Switch>
-					<Route exact path='/' component={Home} />			
+					<Route exact path='/'>
+					<Home value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
+					</Route>
+					<Route path='/restaurants'><Restaurants value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/></Route>			
 					<Route path='/products' component={Products} />
 					<Route path='/casadapitan' component={CasaDapitan} />
 					<Route path='/ggochicken' component={GgoChicken} />
@@ -27,7 +33,7 @@ function App() {
 					<Route path='/paddy' component={Paddy} />
 					<Route path='/tsaa' component={TsaaNa} />
 				</Switch>
-				<Footer/>
+				<Footer />
 			</Router>
 		</ThemeProvider>
 	);
