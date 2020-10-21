@@ -10,16 +10,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 import IconButton from '@material-ui/core/IconButton';
 
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
 	appBar: {
 		top: 'auto',
-        bottom: 0,
-        display:'flex',
-        justifyContent:'center',
-		alignItems:'center',
-		marginTop:20
-		
+		bottom: 0,
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center'
 	},
 	grow: {
 		flexGrow: 1
@@ -31,6 +28,16 @@ const useStyles = makeStyles((theme) => ({
 		left: 0,
 		right: 0,
 		margin: '0 auto'
+	},
+	toolbarMargin: {
+		...theme.mixins.toolbar,
+		marginBottom: '4.5em',
+		[theme.breakpoints.down('md')]: {
+			marginBottom: '3em'
+		},
+		[theme.breakpoints.down('xs')]: {
+			marginBottom: '2em'
+		}
 	}
 }));
 
@@ -38,7 +45,8 @@ export default function Footer() {
 	const classes = useStyles();
 
 	return (
-		<React.Fragment>
+		<footer>
+			<div className={classes.toolbarMargin} />
 			<CssBaseline />
 			<AppBar position='fixed' color='primary' className={classes.appBar}>
 				<Toolbar>
@@ -56,6 +64,6 @@ export default function Footer() {
 					</IconButton>
 				</Toolbar>
 			</AppBar>
-		</React.Fragment>
+		</footer>
 	);
 }

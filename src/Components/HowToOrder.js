@@ -11,9 +11,6 @@ const useStyles = makeStyles(theme => ({
 	flex: {
 		display: 'flex',
 		justifyContent: 'center'
-    },
-    container:{
-        marginBottom:50
     }
 }));
 
@@ -21,16 +18,16 @@ function HowToOrder() {
 	const classes = useStyles();
 
 	return (
-		<Container className={classes.container} maxWidth="lg">
+		<Container maxWidth="xl">
 			<div className={classes.root}>
 				<Grid className={classes.flex} container>
-					<Grid className={classes.flex} item xs={4}>
+					<Grid className={classes.flex} item xs={12} s={6} lg={4}>
 						<HowToOrderCard className={classes.paper} />
 					</Grid>
-					<Grid className={classes.flex} item xs={4}>
+					<Grid className={classes.flex} item xs={12} s={6} lg={4}>
 						<HowToOrderCard className={classes.paper} />
 					</Grid>
-					<Grid className={classes.flex} item xs={4}>
+					<Grid className={classes.flex} item xs={12} s={6} lg={4}>
 						<HowToOrderCard className={classes.paper} />
 					</Grid>
 				</Grid>

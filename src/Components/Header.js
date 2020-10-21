@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, useScrollTrigger, Tabs, Tab, Button, Menu, MenuItem, useMediaQuery, SwipeableDrawer, IconButton, ListItem, ListItemText, List, ListItemIcon  } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/styles';
-import kainTayo from '../assets/KainTayo.png';
+import kainTayo from '../assets/kainTayo.png';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -45,8 +45,8 @@ const useStyles = makeStyles(theme => ({
 	tabContainer: {
 		marginLeft: 'auto'
 	},
-	tab: {
-		...theme.typography.tab,
+	headline: {
+		...theme.typography.headline,
 		minWidth: 10,
 		marginLeft: '25px',
 		color: theme.palette.common.blue
@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
 		transition: '0.5s ease-in'
 	},
 	menuItem: {
-		...theme.typography.tab,
+		...theme.typography.headline,
 		'&:hover': {
 			opacity: 1
 		},
@@ -82,20 +82,20 @@ const useStyles = makeStyles(theme => ({
 		zIndex:theme.zIndex.modal + 1
 	},
 	drawerIconContainer: {
-		marginLeft: 'auto',
+		marginLeft: 'auto',		
 		'&:hover': {
-			backgroundColor: theme.palette.common.blue
+			backgroundColor: "transparent"
 		}
 	},
 	drawerIcon: {
 		height: '50px',
-		width: '50px'
+		width: '50px'		
 	},
 	drawer: {
 		backgroundColor: theme.palette.common.blue
 	},
 	drawerItem: {
-		...theme.typography.tab,
+		...theme.typography.headline,
 		color: "white",
 		opacity:0.7
 	},
@@ -159,7 +159,7 @@ function Header(props) {
 		{name:'Contact Us',link:'/contact',activeIndex:4}
 	]
 
-	//highlights correct tab even on refresh/reload, and makes sure that the path is set correctly
+	//highlights correct headline even on refresh/reload, and makes sure that the path is set correctly
 	useEffect(() => {
 		//loops through routes and menu options and sets a CASE statement to check for the pathname
 		//used for the highlight to set active state
@@ -185,7 +185,7 @@ function Header(props) {
 			<Tabs value={value} onChange={handleChange} className={classes.tabContainer} indicatorColor='primary'>		
 				{routes.map((route,index)=>
 					(<Tab 
-						className={classes.tab} 
+						className={classes.headline} 
 						component={Link} 
 						to={route.link} 
 						label={route.name} 
@@ -264,7 +264,7 @@ function Header(props) {
 				</List>
 			</SwipeableDrawer>
 			<IconButton className={classes.drawerIconContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
-				<MenuIcon color="primary" className={classes.drawerIcon} />
+				<MenuIcon color="primary"  className={classes.drawerIcon} />
 			</IconButton>
 		</React.Fragment>
 	);

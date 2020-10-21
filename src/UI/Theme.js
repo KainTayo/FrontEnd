@@ -17,17 +17,18 @@ export default createMuiTheme({
 		}
 	},
 	typography: {
-        tab:{
-            fontFamily:'Raleway',
+        headline:{
+            fontFamily:'Montserrat',
             textTransform:'none',
             fontWeight:'700',
             fontSize:'1rem',
         },
         checkout:{
-            fontFamily: "Pacifico",
+            fontFamily: "Lato",
             fontSize:"1rem",
             textTransform:"none",
             color:"white"
-        }
+		}
+		
 	}
 });
