@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, useScrollTrigger, Tabs, Tab, Button, Menu, MenuItem, useMediaQuery, SwipeableDrawer, IconButton, ListItem, ListItemText, List, ListItemIcon  } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/styles';
-import kainTayo from '../assets/kainTayo.png'
+import KainTayo from '../assets/KainTayo.png'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -274,7 +274,7 @@ function Header(props) {
 				<AppBar className={classes.appBar} position='fixed'>
 					<Toolbar disableGutters>
 						<Button className={classes.logoContainer} disableRipple onClick={() => setValue(0)} component={Link} to='/'>
-							<img alt='company logo' className={classes.logo} src={kainTayo} />
+							<img alt='company logo' className={classes.logo} src={KainTayo} />
 						</Button>
 						{matches ? mobileView : desktopView}
 					</Toolbar>
