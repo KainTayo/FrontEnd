@@ -1,7 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, useScrollTrigger, Tabs, Tab, Button, Menu, MenuItem, useMediaQuery, SwipeableDrawer, IconButton, ListItem, ListItemText, List, ListItemIcon  } from '@material-ui/core';
+import {
+	AppBar,
+	Toolbar,
+	useScrollTrigger,
+	Tabs,
+	Tab,
+	Button,
+	Menu,
+	MenuItem,
+	useMediaQuery,
+	SwipeableDrawer,
+	IconButton,
+	ListItem,
+	ListItemText,
+	List,
+	ListItemIcon
+} from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/styles';
-import KainTayo from '../assets/KainTayo.png'
+import KainTayo from '../assets/KainTayo.png';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -40,7 +56,7 @@ const useStyles = makeStyles(theme => ({
 		},
 		[theme.breakpoints.down('xs')]: {
 			height: '5em',
-			marginLeft:'2em'
+			marginLeft: '2em'
 		}
 	},
 	tabContainer: {
@@ -80,31 +96,35 @@ const useStyles = makeStyles(theme => ({
 	},
 	appBar: {
 		backgroundColor: 'whitesmoke',
-		zIndex:theme.zIndex.modal + 1
+		zIndex: theme.zIndex.modal + 1
 	},
 	drawerIconContainer: {
-		marginLeft: 'auto',		
+		marginLeft: 'auto',
 		'&:hover': {
-			backgroundColor: "transparent"
+			backgroundColor: 'transparent'
+		},
+		[theme.breakpoints.down('md')]: {
+			marginRight: 'auto',
+			marginLeft: '1em'
 		}
 	},
 	drawerIcon: {
 		height: '50px',
-		width: '50px'		
+		width: '50px'
 	},
 	drawer: {
 		backgroundColor: theme.palette.common.blue
 	},
 	drawerItem: {
 		...theme.typography.headline,
-		color: "white",
-		opacity:0.7
+		color: 'white',
+		opacity: 0.7
 	},
 	drawerItemCheckout: {
 		backgroundColor: theme.palette.common.orange
 	},
 	drawerItemSelected: {
-		"&.MuiListItemText-root":{
+		'&.MuiListItemText-root': {
 			opacity: 1
 		}
 	}
@@ -113,7 +133,7 @@ const useStyles = makeStyles(theme => ({
 function Header(props) {
 	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = useState(null);
-	const [openMenu, setOpenMenu] = useState(false);	
+	const [openMenu, setOpenMenu] = useState(false);
 	const [openDrawer, setOpenDrawer] = useState(false);
 
 	const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -141,22 +161,27 @@ function Header(props) {
 
 	//modular code for Mapping menuItems
 	const menuOptions = [
-		{ name: 'Restaurants', link: '/restaurants',activeIndex:1,selectedIndex:0},
-		{ name: 'Casa Dapitan', link: '/casadapitan',activeIndex:1,selectedIndex:1},
-		{ name: 'GGO Chicken', link: '/ggochicken',activeIndex:1,selectedIndex:2},
-		{ name: 'Kainan ni Remmy', link: '/remy',activeIndex:1,selectedIndex:3},
-		{ name: 'Paddy', link: '/paddy',activeIndex:1,selectedIndex:4},
-		{ name: 'Tsaa Na', link: '/tsaa',activeIndex:1,selectedIndex:5}
+		{ name: 'Restaurants', link: '/restaurants', activeIndex: 1, selectedIndex: 0 },
+		{ name: 'Casa Dapitan', link: '/casadapitan', activeIndex: 1, selectedIndex: 1 },
+		{ name: 'GGO Chicken', link: '/ggochicken', activeIndex: 1, selectedIndex: 2 },
+		{ name: 'Kainan ni Remmy', link: '/remy', activeIndex: 1, selectedIndex: 3 },
+		{ name: 'Paddy', link: '/paddy', activeIndex: 1, selectedIndex: 4 },
+		{ name: 'Tsaa Na', link: '/tsaa', activeIndex: 1, selectedIndex: 5 }
 	];
-	const routes =[
-		{name:'Home',link:'/',activeIndex:0},
-		{name:'Restaurants',link:'/restaurants',activeIndex:1,ariaOwns:anchorEl ? 'simple-menu' : undefined,
-		ariaPopup:anchorEl ? 'true' : undefined,
-		mouseOver:e => handleClick(e)},
-		{name:'Products',link:'/products',activeIndex:2},
-		{name:'About Us',link:'/about',activeIndex:3},
-		{name:'Contact Us',link:'/contact',activeIndex:4}
-	]
+	const routes = [
+		{ name: 'Home', link: '/', activeIndex: 0 },
+		{
+			name: 'Restaurants',
+			link: '/restaurants',
+			activeIndex: 1,
+			ariaOwns: anchorEl ? 'simple-menu' : undefined,
+			ariaPopup: anchorEl ? 'true' : undefined,
+			mouseOver: e => handleClick(e)
+		},
+		{ name: 'Products', link: '/products', activeIndex: 2 },
+		{ name: 'About Us', link: '/about', activeIndex: 3 },
+		{ name: 'Contact Us', link: '/contact', activeIndex: 4 }
+	];
 
 	//highlights correct headline even on refresh/reload, and makes sure that the path is set correctly
 	useEffect(() => {
@@ -176,28 +201,32 @@ function Header(props) {
 					break;
 			}
 		});
-	}, [props.value, menuOptions, props.selectedIndex, routes,props]);
+	}, [props.value, menuOptions, props.selectedIndex, routes, props]);
 
+	//Checkout cart
+	const checkoutCart = (
+		<Button component={Link} to='/checkout' variant='contained' color='secondary' className={classes.button}>
+			<ShoppingCartIcon /> Checkout
+		</Button>
+	);
 	//renders when on desktop view
 	const desktopView = (
 		<React.Fragment>
-			<Tabs value={props.value} onChange={handleChange} className={classes.tabContainer} indicatorColor='primary'>		
-				{routes.map((route,index)=>
-					(<Tab 
-						className={classes.headline} 
-						component={Link} 
-						to={route.link} 
-						label={route.name} 
-						key={`${route}${index}`} 
-						aria-owns={route.ariaOwns} 
+			<Tabs value={props.value} onChange={handleChange} className={classes.tabContainer} indicatorColor='primary'>
+				{routes.map((route, index) => (
+					<Tab
+						className={classes.headline}
+						component={Link}
+						to={route.link}
+						label={route.name}
+						key={`${route}${index}`}
+						aria-owns={route.ariaOwns}
 						aria-haspopup={route.ariaPopup}
-						onMouseOver={route.mouseOver} 
-						/>
-					))}		
+						onMouseOver={route.mouseOver}
+					/>
+				))}
 			</Tabs>
-			<Button component={Link} to='/checkout' variant='contained' color='secondary' className={classes.button}>
-				<ShoppingCartIcon /> Checkout
-			</Button>
+			{checkoutCart}
 			<Menu
 				classes={{ paper: classes.menu }}
 				id='simple-menu'
@@ -206,7 +235,7 @@ function Header(props) {
 				onClose={handleClose}
 				MenuListProps={{ onMouseLeave: handleClose }}
 				elevation={0}
-				style={{zIndex:1302}}
+				style={{ zIndex: 1302 }}
 				keepMounted>
 				{menuOptions.map((option, index) => (
 					<MenuItem
@@ -236,13 +265,26 @@ function Header(props) {
 				onClose={() => setOpenDrawer(false)}
 				onOpen={() => setOpenDrawer(true)}
 				classes={{ paper: classes.drawer }}>
-				<div className={classes.toolbarMargin}/>
+				<div className={classes.toolbarMargin} />
 				<List disablePadding>
-				{routes.map((route,index)=>(
-					<ListItem key={`${route}${index}`} divider button component={Link} to={route.link} classes={{selected:classes.drawerItemSelected}} selected={props.value===route.activeIndex}onClick={()=>{setOpenDrawer(false);props.setValue(route.activeIndex) }}>
-						<ListItemText className={classes.drawerItem}disableTypography>{route.name}</ListItemText>
-					</ListItem>
-				))}
+					{routes.map((route, index) => (
+						<ListItem
+							key={`${route}${index}`}
+							divider
+							button
+							component={Link}
+							to={route.link}
+							classes={{ selected: classes.drawerItemSelected }}
+							selected={props.value === route.activeIndex}
+							onClick={() => {
+								setOpenDrawer(false);
+								props.setValue(route.activeIndex);
+							}}>
+							<ListItemText className={classes.drawerItem} disableTypography>
+								{route.name}
+							</ListItemText>
+						</ListItem>
+					))}
 					<ListItem
 						onClick={() => {
 							setOpenDrawer(false);
@@ -254,8 +296,10 @@ function Header(props) {
 						className={classes.drawerItemCheckout}
 						to='/checkout'
 						selected={props.value === 5}
-						classes={{root:classes.drawerItemCheckout,selected:classes.drawerItemSelected}}>
-						<ListItemIcon><ShoppingCartIcon /></ListItemIcon>
+						classes={{ root: classes.drawerItemCheckout, selected: classes.drawerItemSelected }}>
+						<ListItemIcon>
+							<ShoppingCartIcon />
+						</ListItemIcon>
 						<ListItemText className={classes.drawerItem} disableTypography>
 							Checkout
 						</ListItemText>
@@ -263,7 +307,7 @@ function Header(props) {
 				</List>
 			</SwipeableDrawer>
 			<IconButton className={classes.drawerIconContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
-				<MenuIcon color="primary"  className={classes.drawerIcon} />
+				<MenuIcon color='primary' className={classes.drawerIcon} />
 			</IconButton>
 		</React.Fragment>
 	);
@@ -272,10 +316,11 @@ function Header(props) {
 			<ElevationScroll>
 				<AppBar className={classes.appBar} position='fixed'>
 					<Toolbar disableGutters>
+						{matches ? mobileView : null}
 						<Button className={classes.logoContainer} disableRipple onClick={() => props.setValue(0)} component={Link} to='/'>
 							<img alt='company logo' className={classes.logo} src={KainTayo} />
 						</Button>
-						{matches ? mobileView : desktopView}
+						{matches ? checkoutCart : desktopView}
 					</Toolbar>
 				</AppBar>
 			</ElevationScroll>

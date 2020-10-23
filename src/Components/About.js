@@ -17,7 +17,9 @@ const useStyles = makeStyles(theme => ({
 		},
 		[theme.breakpoints.down('xs')]: {
 			marginTop: '2em',
-			marginBottom: '1.5em'
+			marginBottom: '1.5em',
+			paddingLeft:'1em',
+			paddingRight:'1em'
 		}
 	},
 	image: {

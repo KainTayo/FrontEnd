@@ -39,7 +39,8 @@ export default createMuiTheme({
 			fontFamily: "'Montserrat', 'sans-serif'"
 		},
 		h4:{
-			fontFamily: "'Montserrat', 'sans-serif'"
+			fontFamily: "'Montserrat', 'sans-serif'",
+			color:"white"
 		},
 		h5:{
 			fontFamily: "'Montserrat', 'sans-serif'"
@@ -52,7 +53,8 @@ export default createMuiTheme({
 	
 		},
 		body2:{
-			fontFamily: "'Lato', 'sans-serif'"		
+			fontFamily: "'Lato', 'sans-serif'",
+			color:"white"		
 	
 		},
 		subtitle1:{
