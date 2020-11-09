@@ -24,13 +24,13 @@ function Info() {
 		<Container className={classes.container} maxWidth="xl">
 			<div className={classes.root}>
 				<Grid className={classes.flex} container>
-					<Grid className={classes.flex} item xs={12} s={6} lg={4}>
+					<Grid className={classes.flex} item xs={12} s={6} md>
 						<HowToOrderCard className={classes.paper} />
 					</Grid>
-					<Grid className={classes.flex} item xs={12} s={6} lg={4}>
+					<Grid className={classes.flex} item xs={12} s={6} md>
 						<HowToOrderCard className={classes.paper} />
 					</Grid>
-					<Grid className={classes.flex} item xs={12} s={6} lg={4}>
+					<Grid className={classes.flex} item xs={12} s={6} md>
 						<HowToOrderCard className={classes.paper} />
 					</Grid>
 				</Grid>

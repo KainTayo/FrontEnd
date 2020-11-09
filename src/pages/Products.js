@@ -1,8 +1,8 @@
 import React ,{ useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import MenuCard from './MenuCard';
 import axios from 'axios'
+import MenuCard from '../Components/MenuCard'
 
 const useStyles = makeStyles(theme => ({
 	root: {

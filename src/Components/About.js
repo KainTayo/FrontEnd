@@ -101,7 +101,7 @@ function About(props) {
 						</Grid>
 						<Grid container justify='center'>
 							<Grid item>
-								<Button component={Link} to="/products" onClick={()=> props.setValue(2)} className={classes.button} variant='container'>
+								<Button component={Link} to="/products" onClick={()=> props.setValue(2)} className={classes.button} variant='contained'>
 									<RestaurantMenuIcon />
 									Full Menu
 								</Button>
@@ -110,7 +110,7 @@ function About(props) {
 								<Button component={Link}
 								onClick={()=> props.setValue(1)}
 								 to="/restaurants"
-								className={classes.button}variant='container'>
+								className={classes.button}variant='contained'>
 									<HouseIcon />
 									<span style={{ marginLeft: 3 }}>Restaurants</span>
 								</Button>
